@@ -7,14 +7,14 @@ public class MazeShortestPath {
 	public static void main(String[] args) {
 		int a[][] = {{1,1,0,1,0,1,1,0},
 					{1,0,1,0,1,0,1,1},
-					{0,1,0,1,1,1,0,1},	
-					{0,0,1,1,1,0,0,1},
+					{1,1,0,1,1,1,0,1},	
+					{0,1,1,1,1,0,0,1},
 					{1,1,0,1,0,1,1,1},
 					{0,0,1,0,1,0,0,1}
 		};
 		
 		
-		int result =shortestPath(a,0,0,8,0);
+		int result =shortestPath(a,0,0,4,0);
 		
 		if(result>=10000)
 			System.out.println("Path not found");
