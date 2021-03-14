@@ -56,6 +56,39 @@ public class TreeNode {
 		}
 	}
 	
+	
+	//Pre-Order traversal
+	public void traversePreOrder() {
+		
+		//for pre order the root has to print first
+		
+		System.out.print(data+", ");
+		if(leftchild != null) {
+			 leftchild.traversePreOrder();
+		}
+		
+		if(rightchild != null) {
+			 rightchild.traversePreOrder();
+		}
+	}
+	
+	
+	//Post-Order traversal
+public void traversePostOrder() {
+		
+		if(leftchild != null) {
+			 leftchild.traversePostOrder();
+		}
+		
+		if(rightchild != null) {
+			 rightchild.traversePostOrder();
+		}
+		//for post-order the root has to print first
+		System.out.print(data+", ");
+	}
+
+
+	
 	//get method
 	public TreeNode get(int value) {
 		
@@ -75,15 +108,34 @@ public class TreeNode {
 		}
 		else {
 			//if value is greater than parent go to right sub tree
-			if(value>data) {
+		
 				if(rightchild != null) {
 					return rightchild.get(value);
 				}
 			}
-		}
+		
 		
 		// if the value is does not present in the tree return null
 		return null;
+	}
+	
+	//Min AND Max
+	public int min() {
+		if(leftchild==null) {
+			return data;
+		}
+		else {
+			return leftchild.min();
+		}
+	}
+	
+	public int max() {
+		if(rightchild==null) {
+			return data;
+		}
+		else {
+			return rightchild.max();
+		}
 	}
 	
 	
