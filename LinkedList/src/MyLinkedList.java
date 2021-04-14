@@ -38,8 +38,7 @@ public class MyLinkedList {
 	
 	
 	
-	
-	
+
 	
 	//Inner class for Node
 	static class Node{
